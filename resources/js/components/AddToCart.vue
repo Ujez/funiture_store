@@ -17,9 +17,23 @@
         },
         props:['productId', 'userId'],
         methods:{
-            addProductToCart(){
+            async addProductToCart(){
 
-               alert(this.productId);
+                // Checking if user logged in.
+
+                if(this.userId == 0){
+                    this.$toastr.e('You Need to login, To add this product in Cart');
+                    return;
+                }
+
+                // If user logged in then add item to cart.
+
+                let response = await axios.post('/cart', {
+                    'product_id': this.productId
+                });
+
+                    console.log(response.data);
+                // this.$root.$emit('changeInCart', response.data.items)
 
             }
         },
