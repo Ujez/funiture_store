@@ -162,6 +162,7 @@
     @yield('scripts')
 
     <script>
+        //this makes the user to go to the top of the page when the page is refreshed
         window.onbeforeunload = function() {
             window.scrollTo(0, 0);
         }
