@@ -5377,16 +5377,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      itemCount: ""
+      itemCount: ''
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    this.$root.$on("changeInCart", function (item) {
+    this.$root.$on('changeInCart', function (item) {
       _this.itemCount = item;
     });
   },
@@ -5401,7 +5402,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.post("/cart");
+                return axios.post('/cart');
 
               case 2:
                 response = _context.sent;
@@ -29342,8 +29343,12 @@ var render = function () {
     _c("li", { staticClass: "nav-item" }, [
       _c(
         "a",
-        { staticClass: "btn btn-success btn-sm", attrs: { href: "/checkout" } },
-        [_vm._v("\n            Cart " + _vm._s(_vm.itemCount) + "\n        ")]
+        { staticClass: "btn btn-warning btn-sm", attrs: { href: "/checkout" } },
+        [
+          _vm._v(
+            "\n                Cart " + _vm._s(_vm.itemCount) + "\n        "
+          ),
+        ]
       ),
     ]),
   ])

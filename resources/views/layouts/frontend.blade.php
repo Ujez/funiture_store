@@ -128,7 +128,7 @@
             </div> <!-- container -->
         </header>
 
-
+      
         @yield('content')
     </div>
 

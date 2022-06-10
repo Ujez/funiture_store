@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         /*
          * Application Service Providers...
          */
